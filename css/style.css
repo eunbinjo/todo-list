@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+.dm-serif {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.noto-sans {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*기본 스타일 시트 초기화*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+a, a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*header 영역*/
+header {
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    padding: 1rem;
+}
+
+header .container{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #left {
+    display: flex;
+    text-align: center;
+}
+
+header #left div {
+    margin-right: 1rem;    
+}
+
+header div i {
+    font-size: 1.25rem;
+}
+
+header div a {
+    display: block;
+    font-size: 0.9rem;
+}
+
+header #right input {
+    margin-left: 0.2rem;
+    border: none;
+    width: 10rem;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
+}
+
+/*main 영역*/
+main {
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .hidden {
     display: none;
 }
