@@ -3,8 +3,8 @@ const chosenImage = images[Math.floor(Math.random() * images.length)];
 
 console.log(chosenImage);
 
-const main = document.querySelector("main");
-main.style.backgroundImage = `url(img/${chosenImage})`;
+const body = document.querySelector("body");
+body.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(img/${chosenImage})`;
 
 // const bgImage = document.createElement("img");
 // bgImage.src = `/img/${chosenImage}`;

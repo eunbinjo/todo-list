@@ -15,7 +15,7 @@
     <title>Momentum</title>
   </head>
   <body>
-    <header>
+    <header class="">
       <div class="container">
         <div id="left">
           <div id="links">
@@ -41,22 +41,34 @@
       <div class="container">
         <div id="login-form">
           <form class="hidden">
-            <h1>Hello! What's your name?</h1>
-            <input required maxlength="15" type="text" />
+            <h1>Hello, What's your name?</h1>
+            <input required maxlength="15" type="text" autofocus />
           </form>
         </div>
         <div id="clock">
-          <h2>00:00:00</h2>
+          <h2 class="hidden">00:00:00</h2>
         </div>
         <div id="greeting">
           <h1 class="hidden"></h1>
         </div>
-        <div id="quote">
+      </div>
+    </main>
+    <!--main end-->
+    <!--footer-->
+    <footer>
+      <div class="container">
+        <div id="setting">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <div id="quote" class="hidden">
           <span></span>
           <span></span>
         </div>
+        <div class="todo">
+          <a href="#">To do</a>
+        </div>
       </div>
-    </main>
+    </footer>
 
     <script src="js/background.js"></script>
     <script src="js/greetings.js"></script>
