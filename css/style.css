@@ -29,6 +29,21 @@ a, a:link, a:visited {
     margin: 0 auto;
 }
 
+body {
+    width: 100%;
+    height: 100vh;
+    /*배경 이미지*/
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /*드래그 방지*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none 
+}
+
 /*header 영역*/
 header {
     top: 0;
@@ -76,20 +91,6 @@ header #right input {
 }
 
 /*main 영역*/
-body {
-    width: 100%;
-    height: 100vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    /*드래그 방지*/
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none 
-}
-
 main .container {
     height: 100vh;
     display: flex;
@@ -100,7 +101,7 @@ main .container {
 }
 
 #login-form h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 #login-form input {
@@ -126,8 +127,7 @@ main .container {
 }
 
 #todo {
-    width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 #todo form input {
@@ -147,14 +147,23 @@ main .container {
 
 #todo ul {
     margin-top: 1rem;
-    max-height: 200px;
+    max-height: 20vh;
+    width: 30vw;
     overflow-y: auto;
-    -ms-overflow-style: none; /*IE, Edge*/
-    scrollbar-width: none; /*Firefox*/
-    ::-webkit-scrollbar {
-        display: none;
-        width: 0px;
-    }; /*크로미움 기반*/
+}
+
+#todo ul::-webkit-scrollbar{
+    width: 5px;
+}
+
+#todo ul::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: rgb(255, 255, 255, 0.8); /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+#todo ul::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255, 0.1);  /*스크롤바 뒷 배경 색상*/
 }
 
 #todo li {
