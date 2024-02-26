@@ -4,7 +4,8 @@ const loginInput = document.querySelector("#login-form form input");
 const hiddenHeader = document.querySelector("header");
 const hiddenGreeting = document.querySelector("#greeting h1");
 const hiddenClock = document.querySelector("#clock h2");
-const hiddenQuote = document.querySelector("#quote");
+const hiddenFooter = document.querySelector("footer");
+const hiddenTodo = document.querySelector("#todo");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -22,7 +23,8 @@ function paintGreetings(username) {
   hiddenGreeting.classList.remove(HIDDEN_CLASSNAME);
   hiddenHeader.classList.remove(HIDDEN_CLASSNAME);
   hiddenClock.classList.remove(HIDDEN_CLASSNAME);
-  hiddenQuote.classList.remove(HIDDEN_CLASSNAME);
+  hiddenFooter.classList.remove(HIDDEN_CLASSNAME);
+  hiddenTodo.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);

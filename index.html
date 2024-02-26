@@ -15,7 +15,7 @@
     <title>Momentum</title>
   </head>
   <body>
-    <header class="">
+    <header class="hidden fadein">
       <div class="container">
         <div id="left">
           <div id="links">
@@ -40,34 +40,34 @@
     <main id="main">
       <div class="container">
         <div id="login-form">
-          <form class="hidden">
+          <form class="hidden fadein">
             <h1>Hello, What's your name?</h1>
             <input required maxlength="15" type="text" autofocus />
           </form>
         </div>
         <div id="clock">
-          <h2 class="hidden">00:00:00</h2>
+          <h2 class="hidden fadein">00:00:00</h2>
         </div>
         <div id="greeting">
-          <h1 class="hidden"></h1>
+          <h1 class="hidden fadein"></h1>
         </div>
-        <div id="todo">
+        <div id="todo" class="hidden fadein">
           <form id="todo-form">
             <input type="text" placeholder="Today's To-Do?" required />
           </form>
-          <ul id="todo-list"></ul>
+          <ul id="todo-list" class="fadein"></ul>
         </div>
       </div>
     </main>
     <!--main end-->
     <!--footer-->
-    <footer>
+    <footer class="hidden fadein">
       <div class="container">
         <div id="weather">
           <span></span>
           <span></span>
         </div>
-        <div id="quote" class="hidden">
+        <div id="quote">
           <span></span>
           <span></span>
         </div>
