@@ -72,6 +72,7 @@ header #right input {
     width: 10rem;
     background-color: transparent;
     border-bottom: 1px solid #fff;
+    color: white;
 }
 
 /*main 영역*/
@@ -82,6 +83,11 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
+    /*드래그 방지*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none 
 }
 
 main .container {
@@ -107,6 +113,7 @@ main .container {
     text-align: center;
     font-weight: bold;
     padding-bottom: 0.5rem;
+    color: white;
 }
 
 #clock h2 {
@@ -117,6 +124,51 @@ main .container {
     margin-top: -1.5rem;
     font-size: 3rem;
 }
+
+#todo {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+#todo form input {
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    font-size: 1.3rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    color: white;
+}
+
+#todo ul {
+    margin-top: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+    -ms-overflow-style: none; /*IE, Edge*/
+    scrollbar-width: none; /*Firefox*/
+    ::-webkit-scrollbar {
+        display: none;
+        width: 0px;
+    }; /*크로미움 기반*/
+}
+
+#todo li {
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+}
+
+#todo button {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    margin-left: 0.5rem;
+}
+
+/*footer*/
 
 footer {
     bottom: 0;
@@ -133,10 +185,31 @@ footer .container {
     align-items: center;
 }
 
+footer #weather {
+    display: flex;
+    flex-direction: column;
+}
+footer #weather span:first-child {
+    font-size: 1.2rem;
+}
+
+footer #weather span:last-child {
+    font-size: 0.9rem;
+}
+
 footer #quote {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+footer #quote span:last-child {
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+}
+
+footer #setting {
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 
