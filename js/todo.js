@@ -18,15 +18,35 @@ function deleteTodo(event) {
   saveTodos();
 }
 
+function checked(checkBox, selectedSpan) {
+  if (checkBox.checked === true) {
+    checkBox.checked = false;
+    selectedSpan.classList.remove("complete");
+  } else {
+    checkBox.checked = true;
+    selectedSpan.classList.add("complete");
+  }
+}
+
 function paintToDo(newTodo) {
-  const newList = document.createElement("li");
-  newList.id = newTodo.id; //li 태그에 id 추가
+  const newList = document.createElement("div");
+  newList.id = newTodo.id; //div 태그에 id 추가
+  const checkBox = document.createElement("input");
+  checkBox.id = newList.id; //체크 표시 연동
+  checkBox.type = "checkbox";
+  const newLabel = document.createElement("label");
+  newLabel.htmlFor = newList.id; // label 텍스트를 눌러도 체크 표시 됨
   const listSpan = document.createElement("span");
   listSpan.innerText = newTodo.text;
   const button = document.createElement("button");
   button.innerText = "🗙";
   button.addEventListener("click", deleteTodo);
-  newList.appendChild(listSpan);
+  newLabel.addEventListener("click", () => {
+    checked(checkBox, listSpan);
+  });
+  newList.appendChild(checkBox);
+  newLabel.appendChild(listSpan);
+  newList.appendChild(newLabel);
   newList.appendChild(button);
   toDoList.appendChild(newList);
 } // html를 동적으로 추가함
@@ -53,3 +73,17 @@ if (savedTodos !== null) {
   toDos = parsedTodos;
   parsedTodos.forEach(paintToDo); // foreach로 배열의 요소 하나하나를 다시 paintToDo() 함.
 }
+
+// for (let i = 0; i < checkList.length; i++) {
+//   checkList[i].addEventListener("click", function () {
+//     const selectedInput = this.previousSibling;
+//     const selectedSpan = checkList[i].lastChild;
+//     if (selectedInput.checked === true) {
+//       selectedInput.checked = false;
+//       selectedSpan.classList.remove("complete");
+//     } else {
+//       selectedInput.checked = true;
+//       selectedSpan.classList.add("complete");
+//     }
+//   });
+// }
