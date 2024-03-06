@@ -50,6 +50,30 @@
         </div>
         <div id="greeting">
           <h1 class="hidden fadein"></h1>
+          <form>
+            <input
+              class="hidden fadein"
+              required
+              maxlength="15"
+              type="text"
+              autofocus
+            />
+          </form>
+          <p class="hidden fadein"></p>
+        </div>
+        <div id="pomodoro" class="hidden">
+          <div class="outerRing">
+            <div class="timer">
+              <div id="time">
+                <h1 id="minutes">00</h1>
+                <h1 id="colon">:</h1>
+                <h1 id="seconds">10</h1>
+              </div>
+              <div id="onoff">START</div>
+              <div id="paused">PAUSE</div>
+              <span id="setting"><i class="fa-solid fa-gear"></i></span>
+            </div>
+          </div>
         </div>
         <div id="todo" class="hidden fadein">
           <form id="todo-form">
@@ -83,5 +107,6 @@
     <script src="js/quotes.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/pomodoro.js"></script>
   </body>
 </html>

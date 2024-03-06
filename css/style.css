@@ -67,7 +67,8 @@ header #left {
 }
 
 header #left div {
-    margin-right: 1rem;    
+    margin-right: 1rem;   
+    cursor: pointer;
 }
 
 header div i {
@@ -121,9 +122,36 @@ main .container {
     font-size: 7.5rem;
 }
 
+div#greeting {
+   display: flex; 
+}
+
 #greeting h1 {
     margin-top: -1.5rem;
     font-size: 3rem;
+}
+
+#greeting p {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+#greeting form {
+    display: inline;
+}
+
+#greeting input {
+    outline: none; /*아웃라인 없애는 거*/
+    border: 0;
+    background-color: transparent;
+    font-size: 2rem;
+    border-bottom: 2px solid #fff;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    color: white;
 }
 
 #todo {
@@ -270,7 +298,7 @@ footer #setting {
     display: none;
 }
 
-/*페이드 인아웃 효과 구현해보기 (우선순위 나중)*/
+/*페이드 인아웃 효과 구현해보기*/
 .fadein {
     animation: fadein 2s ease-in-out;
     -moz-animation: fadein 2s ease-in-out;
