@@ -61,17 +61,22 @@
           </form>
           <p class="hidden fadein"></p>
         </div>
-        <div id="pomodoro" class="hidden">
-          <div class="outerRing">
-            <div class="timer">
-              <div id="time">
-                <h1 id="minutes">00</h1>
-                <h1 id="colon">:</h1>
-                <h1 id="seconds">10</h1>
+        <div id="hiddenPomodoro" class="hidden fadein">
+          <div id="pomodoro">
+            <div class="outerRing">
+              <div class="timer">
+                <div class="status">SESSION</div>
+                <div id="time">
+                  <span id="minutes">25</span>
+                  <span id="colon">:</span>
+                  <span id="seconds">00</span>
+                </div>
+                <div id="onoff">
+                  <span>START</span>
+                  <span>PAUSE</span>
+                </div>
+                <span id="setting"><i class="fa-solid fa-gear"></i></span>
               </div>
-              <div id="onoff">START</div>
-              <div id="paused">PAUSE</div>
-              <span id="setting"><i class="fa-solid fa-gear"></i></span>
             </div>
           </div>
         </div>

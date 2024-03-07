@@ -1,19 +1,20 @@
-// 포커스를 누르면 시계가 업어지고 뽀모도로가 생김
-// 한 번 더 누르면 원래 시계로 돌아가게 하는거. 토글로 할 순없나 알아보기.
+// 포커스를 누르면 시계가 업어지고 뽀모도로가 생김 (토글 이용)
 const onFocus = document.querySelector("#focus");
 
 const mainClock = document.querySelector("#clock");
-const pomodoro = document.querySelector("#pomodoro");
+const pomodoro = document.querySelector("#hiddenPomodoro");
 
 const loadPomodoro = function (event) {
   event.preventDefault();
-  console.log("Dddddd");
-  mainClock.classList.add(HIDDEN_CLASSNAME);
-  hiddenGreeting.classList.add(HIDDEN_CLASSNAME);
-  hiddenNameCorrect.classList.add(HIDDEN_CLASSNAME);
-  pomodoro.classList.remove(HIDDEN_CLASSNAME);
+  mainClock.classList.toggle(HIDDEN_CLASSNAME);
+  hiddenGreeting.classList.toggle(HIDDEN_CLASSNAME);
+  hiddenNameCorrect.classList.toggle(HIDDEN_CLASSNAME);
+  pomodoro.classList.toggle(HIDDEN_CLASSNAME);
 };
 
 onFocus.addEventListener("click", loadPomodoro);
 
-//
+//분, 초 표시
+const pomoMinutes = document.querySelector("#pomodoro #minutes");
+const pomoSeconds = document.querySelector("#pomodoro #seconds");
+const pomoSet = document.querySelector("#pomodoro #setting");
