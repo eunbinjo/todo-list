@@ -28,10 +28,10 @@
           </div>
         </div>
         <div id="right">
-          <form id="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" />
-          </form>
+          <div id="todoIcon">
+            <i class="fa-solid fa-list"></i>
+            <a>Todo</a>
+          </div>
         </div>
       </div>
     </header>
@@ -79,12 +79,29 @@
               </div>
             </div>
           </div>
+          <div id="timerSet" class="hidden fadein">
+            <div id="timerSetting">
+              <div id="sessionSetting">
+                <i class="fa-solid fa-angle-up"></i>
+                <span id="setMinute">25</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div id="breakSetting">
+                <i class="fa-solid fa-angle-up"></i>
+                <span id="setSecond">5</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            <div id="ok">OK</div>
+          </div>
         </div>
-        <div id="todo" class="hidden fadein">
-          <form id="todo-form">
-            <input type="text" placeholder="Today's To-Do?" required />
-          </form>
-          <div id="todo-list" class="fadein"></div>
+        <div id="box" class="hidden fadein">
+          <div id="todo">
+            <form id="todo-form">
+              <input type="text" placeholder="Today's To-Do?" required />
+            </form>
+            <div id="todo-list" class="fadein"></div>
+          </div>
         </div>
       </div>
     </main>

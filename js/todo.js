@@ -1,3 +1,14 @@
+//투두리스트 보이게 하기
+const todoIcon = document.querySelector("#todoIcon");
+const box = document.querySelector("#box");
+
+const toggleHideenTodo = function () {
+  box.classList.toggle(HIDDEN_CLASSNAME);
+};
+
+todoIcon.addEventListener("click", toggleHideenTodo);
+
+//투두리스트 만들기
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.querySelector("#todo-list");
